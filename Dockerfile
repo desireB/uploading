@@ -4,4 +4,5 @@ RUN apt-get update -qq && apt-get install -y build-essential libpq-dev
 WORKDIR /home/desire/professionnal/moonshots/uploading
 ADD Gemfile /home/desire/professionnal/moonshots/uploading/Gemfile
 RUN bundle install
-ADD . /home/desire/professionnal/moonshots/uploading
+ADD . src/
+CMD ["rails", "server"]
